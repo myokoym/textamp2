@@ -56,12 +56,9 @@
     <textarea cols='20' ng-model='template_text' rows='1'></textarea>
   </p>
   <p>
-    <textarea cols='40' ng-model='text' rows='5'></textarea>
+    <textarea cols='40' ng-model='text' rows='5' ng-change='updateText()'></textarea>
   </p>
 
-  <p>
-    <button ng-click="updateText()">更新</button>
-  </p>
   <p>
     <textarea cols='40' rows='5'>{{amplifiedText}}</textarea>
   </p>
