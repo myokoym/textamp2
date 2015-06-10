@@ -9,7 +9,11 @@ angular.module('textamp2')
     $scope.updateText = function () {
       var texts = []
       for (var i = 0; i < $scope.volume; i++) {
-        texts.push($scope.text);
+        var text = $scope.text
+        if ($scope.increment) {
+          text = text.replace('#', i);
+        }
+        texts.push(text);
       }
       var joinChar = '';
       for (var i = 0; i < $scope.linefeed; i++) {
