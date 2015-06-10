@@ -2,32 +2,73 @@
 
   <div ng-include="'app/components/navbar/navbar.html'"></div>
 
-  <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-  </div>
+  <p>
+    volume
+    <select ng-model='volume' ng-options="volume for volume in max_volumes">
+    </select>
 
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-        <div class="caption">
-          <h3>{{awesomeThing.title}}</h3>
-          <p>{{awesomeThing.description}}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <input name='linefeed' type='checkbox' value='1'>line feed</input>
+  </p>
+  <p>
+    <input name='increment' type='checkbox' value='1'>increment</input>
+    　
+    sign
+    <select name='increment_sign'>
+      <option value='#'>#</option>
+      <option value='$'>$</option>
+      <option value='%'>%</option>
+      <option value='&amp;'>&</option>
+      <option value='@'>@</option>
+      <option value='+'>+</option>
+      <option value='*'>*</option>
+      <option value='?'>?</option>
+      <option value='_'>_</option>
+      <option value='-'>-</option>
+    </select>
+    　
+    start
+    <select name='increment_start'>
+      <option selected='selected' value='0'>0</option>
+      <option value='1'>1</option>
+    </select>
+    　
+    digit
+    <select name='increment_digit'>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>
+      <option value='6'>6</option>
+      <option value='7'>7</option>
+      <option value='8'>8</option>
+      <option value='9'>9</option>
+      <option value='10'>10</option>
+    </select>
+  </p>
+  <p>
+    <input type='checkbox' value='1'>template</input>
+    　
+    sign
+    <input name='template_sign' size='5' type='text'>
+    　
+    parts
+    <textarea cols='20' ng-model='template_text' rows='1'></textarea>
+  </p>
+  <p>
+    <textarea cols='40' ng-model='text' rows='5'></textarea>
+  </p>
 
-  <hr>
-
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-  </div>
+  <p>
+    <button ng-click="updateText()">更新</button>
+  </p>
+  <p>
+    <textarea cols='40' rows='5'>{{amplifiedText}}</textarea>
+  </p>
+  <p>
+    HTTP GET URL
+    <br>
+    <input size='50' type='text'>
+  </p>
 
 </div>
