@@ -15,7 +15,7 @@
     <input ng-model='increment' ng-change='updateText()' type='checkbox' value='1'>increment</input>
     　
     sign
-    <select name='increment_sign'>
+    <select ng-model='increment_sign' ng-change='updateText()'>
       <option value='#'>#</option>
       <option value='$'>$</option>
       <option value='%'>%</option>

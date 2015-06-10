@@ -6,12 +6,13 @@ angular.module('textamp2')
     $scope.volume = 10;
     $scope.max_linefeeds = Array.apply(null, {length: 3}).map(Number.call, Number);
     $scope.linefeed = 0;
+    $scope.increment_sign = '#';
     $scope.updateText = function () {
       var texts = []
       for (var i = 0; i < $scope.volume; i++) {
         var text = $scope.text
         if ($scope.increment) {
-          text = text.replace('#', i);
+          text = text.replace($scope.increment_sign, i);
         }
         texts.push(text);
       }
