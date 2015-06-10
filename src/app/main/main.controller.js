@@ -13,7 +13,8 @@ angular.module('textamp2')
       for (var i = 0; i < $scope.volume; i++) {
         var text = $scope.text
         if ($scope.increment) {
-          text = text.replace($scope.increment_sign, i + Number($scope.increment_start));
+          var number = i + Number($scope.increment_start);
+          text = text.replace($scope.increment_sign, number));
         }
         texts.push(text);
       }
