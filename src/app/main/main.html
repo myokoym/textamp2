@@ -7,7 +7,9 @@
     <select ng-model='volume' ng-change='updateText()' ng-options="volume for volume in max_volumes">
     </select>
 
-    <input ng-model='linefeed' ng-change='updateText()' type='checkbox' value='1'>line feed</input>
+    line feed
+    <select ng-model='linefeed' ng-change='updateText()' ng-options="linefeed for linefeed in max_linefeeds">
+    </select>
   </p>
   <p>
     <input name='increment' type='checkbox' value='1'>increment</input>
