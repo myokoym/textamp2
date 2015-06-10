@@ -29,7 +29,7 @@
     </select>
     　
     start
-    <select name='increment_start'>
+    <select ng-model='increment_start' ng-change='updateText()'>
       <option selected='selected' value='0'>0</option>
       <option value='1'>1</option>
     </select>
