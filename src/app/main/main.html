@@ -4,10 +4,10 @@
 
   <p>
     volume
-    <select ng-model='volume' ng-options="volume for volume in max_volumes">
+    <select ng-model='volume' ng-change='updateText()' ng-options="volume for volume in max_volumes">
     </select>
 
-    <input name='linefeed' type='checkbox' value='1'>line feed</input>
+    <input ng-model='linefeed' ng-change='updateText()' type='checkbox' value='1'>line feed</input>
   </p>
   <p>
     <input name='increment' type='checkbox' value='1'>increment</input>
@@ -60,6 +60,6 @@
   </p>
 
   <p>
-    <textarea cols='40' rows='5'>{{amplifiedText}}</textarea>
+    <textarea cols='40' rows='20'>{{amplifiedText}}</textarea>
   </p>
 </div>

@@ -9,6 +9,10 @@ angular.module('textamp2')
       for (var i = 0; i < $scope.volume; i++) {
         texts.push($scope.text);
       }
-      $scope.amplifiedText = texts.join('\n');
+      var joinChar = '\n';
+      if ($scope.linefeed) {
+        joinChar = ('\n\n');
+      }
+      $scope.amplifiedText = texts.join(joinChar);
     };
   });
